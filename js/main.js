@@ -16,7 +16,7 @@ Vue.component("info-card", {
 
     data() {
         return {
-            "showCard": false
+            "showCard": true
         }
     }
 })

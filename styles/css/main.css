@@ -60,22 +60,23 @@ div#root .image-view__image-container {
   width: 52%;
   box-shadow: 0 0px 15px 0px gray;
   min-width: 600px;
-  transition: opacity .4s, transform .4s;
+  transition: opacity .4s, transform .6s;
   transform: translateX(0) scale(0);
   opacity: 0;
 }
 div#root .image-view__image-container.selected {
-  transition: opacity .9s ease, transform .9s;
+  transition: opacity .5s ease, transform 1s;
   opacity: 1;
   transform: translateX(0) scale(1);
+  z-index: 20;
 }
 div#root .image-view__image-container.next-image {
-  transition: opacity .9s, transform .9s;
+  transition: opacity 1s, transform 1s;
   opacity: 0.3;
   transform: translateX(110%) scale(0.6);
 }
 div#root .image-view__image-container.previous-image {
-  transition: opacity .9s, transform .9s;
+  transition: opacity 1s, transform 1s;
   opacity: 0.3;
   transform: translateX(-110%) scale(0.6);
 }
@@ -125,6 +126,7 @@ i.fa.fa-angle-left {
   height: 65px;
   font-size: 0.9em;
   font-weight: bolder;
+  z-index: 50;
 }
 .info-card i {
   color: #f94c0c;
