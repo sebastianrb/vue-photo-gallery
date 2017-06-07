@@ -2,10 +2,46 @@
 <html>
     <head>
         <title>Vue Photo Gallery</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon"
+              type="image/png"
+              href="https://s-media-cache-ak0.pinimg.com/originals/a9/e0/19/a9e01984a9cdadd57b0fd3e0985fb2fc.png">
+        <script src="https://use.fontawesome.com/3c2bdfb862.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
         <link rel="stylesheet" href="styles/css/main.css"/>
     </head>
     <body>
 
+    <div class="title-container">
+        <h2 class="title-container__title">Photo Gallery</h2>
+        <h3 class="title-container__author">By Sebastian Ramirez-Brunner</h3>
+    </div>
+
+    <div id="root" class="container">
+
+        <gallery-container>
+            <div class="image-view">
+                <div v-for="(image, index) in images" class="image-view__image-container"
+                v-bind:class="{selected: image.selected, 'next-image': image.next, 'previous-image': image.previous}" v-if="image.src">
+                    <img :src="image.src" alt="placeholder+image" class="image-view__image">
+                </div>
+            </div>
+
+            <div class="gallery-controls">
+                <div class="gallery-controls__arrow previous-arrow" @click="nextPhoto"><i class="fa fa-angle-left" aria-hidden="true"></i></div>
+                <div class="gallery-controls__arrow next-arrow" @click="previousPhoto"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
+            </div>
+
+        </gallery-container>
+
+        <info-card>
+            <div class="info-card__content" v-for="(image, index) in images" v-bind:class="{'info-card__content--shown': image.selected}">
+                <p class="info-card__content-caption"><span>Name</span>{{image.name}}</p>
+                <p class="info-card__content-caption"><span>Location</span>{{image.location}}</p>
+                <p class="info-card__content-caption"><span >Camera</span>{{image.camera}}</p>
+            </div>
+        </info-card>
+    </div>
 
     <script
       src="https://code.jquery.com/jquery-3.2.1.min.js"
