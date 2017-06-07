@@ -77,7 +77,7 @@ new Vue({
         },
         {
             name: "Rocks in a River",
-            src: "http://dummyimage.com/800x600/4d494d/686a82.gif&text=placeholder+image",
+            src: "./images/photo-portfolio-rock.jpg",
             selected: false,
             next: false,
             previous: true,
@@ -87,10 +87,21 @@ new Vue({
         ],
 
         selectedPhotoID: "",
-        infoCardArray: []
+        nextID: "",
+        previousID: ""
     },
 
     methods: {
+        setNextAndPreviousID: function() {
+            this.images.forEach( (image, index) => {
+                if(image.next === true) {
+                    this.nextID = index;
+                } else if(image.previous === true) {
+                    this.previousID = index;
+                }
+            });
+        },
+
         setSelectedID: function() {
             this.images.forEach( (image, index) => {
                 if(image.selected === true) {
@@ -100,7 +111,6 @@ new Vue({
         },
 
         nextPhoto: function() {
-            console.log("clicked");
             //change selection to next
             //if we're at end, go back to beginning; else, increment selected ID
             if(this.selectedPhotoID === this.images.length - 1) {
@@ -109,11 +119,24 @@ new Vue({
                 this.selectedPhotoID++;
             }
 
+            //change next and previous photos
+            if(this.nextID === this.images.length - 1) {
+                this.nextID = 0;
+            } else {
+                this.nextID++;
+            }
+
+            if(this.previousID === this.images.length - 1) {
+                this.previousID = 0;
+            } else {
+                this.previousID++;
+            }
+
             this.updateSelectedPhoto();
+            this.setNextAndPreviousID();
         },
 
         previousPhoto: function() {
-            console.log("clicked");
             //change selection to previous
             if(this.selectedPhotoID === 0) {
                 this.selectedPhotoID = this.images.length - 1;
@@ -121,7 +144,21 @@ new Vue({
                 this.selectedPhotoID--;
             }
 
+            //change next and previous photos
+            if(this.nextID === 0) {
+                this.nextID = this.images.length - 1;
+            } else {
+                this.nextID--;
+            }
+
+            if(this.previousID === 0) {
+                this.previousID = this.images.length - 1;
+            } else {
+                this.previousID--;
+            }
+
             this.updateSelectedPhoto();
+            this.setNextAndPreviousID();
 
         },
 
@@ -129,12 +166,15 @@ new Vue({
             //set selected image based on new ID
             this.images.forEach((element, index) => {
                 element.selected = (index === this.selectedPhotoID);
+                element.next = (index === this.nextID);
+                element.previous = (index === this.previousID);
             });
         }
     },
 
     mounted() {
         this.setSelectedID();
+        this.setNextAndPreviousID();
     }
 })
 

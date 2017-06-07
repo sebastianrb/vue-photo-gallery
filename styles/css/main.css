@@ -60,19 +60,24 @@ div#root .image-view__image-container {
   width: 52%;
   box-shadow: 0 0px 15px 0px gray;
   min-width: 600px;
-  transition: opacity .4s;
+  transition: opacity .4s, transform .4s;
+  transform: translateX(0) scale(0);
   opacity: 0;
 }
 div#root .image-view__image-container.selected {
+  transition: opacity .9s ease, transform .9s;
   opacity: 1;
+  transform: translateX(0) scale(1);
 }
 div#root .image-view__image-container.next-image {
-  opacity: 0.4;
-  transform: translateX(110%) scale(0.7);
+  transition: opacity .9s, transform .9s;
+  opacity: 0.3;
+  transform: translateX(110%) scale(0.6);
 }
 div#root .image-view__image-container.previous-image {
-  opacity: 0.4;
-  transform: translateX(-110%) scale(0.7);
+  transition: opacity .9s, transform .9s;
+  opacity: 0.3;
+  transform: translateX(-110%) scale(0.6);
 }
 div#root .image-view__image {
   width: 100%;
@@ -81,11 +86,11 @@ div#root .image-view__image {
 }
 
 .gallery-controls {
-  height: 60px;
+  height: 55px;
   width: 75%;
   border-radius: 4px;
   overflow: hidden;
-  margin: 20px auto;
+  margin: 0 auto 30px;
 }
 
 .gallery-controls__arrow {
@@ -97,7 +102,7 @@ div#root .image-view__image {
   align-items: center;
   transition: all .2s;
   cursor: pointer;
-  background: rgba(1, 1, 56, 0.4);
+  background: rgba(1, 1, 56, 0.3);
 }
 .gallery-controls__arrow:hover {
   background: rgba(1, 1, 56, 0.7);
@@ -105,7 +110,7 @@ div#root .image-view__image {
 
 i.fa.fa-angle-right,
 i.fa.fa-angle-left {
-  font-size: 3.1em;
+  font-size: 2.8em;
   color: white;
 }
 
@@ -117,7 +122,7 @@ i.fa.fa-angle-left {
   background: rgba(1, 1, 56, 0.4);
   color: #010138;
   width: 50%;
-  height: 70px;
+  height: 65px;
   font-size: 0.9em;
   font-weight: bolder;
 }
@@ -141,7 +146,7 @@ i.fa.fa-angle-left {
   left: -45px;
   border: none;
   background: rgba(1, 1, 56, 0.6);
-  height: 70px;
+  height: 65px;
   width: 45px;
   border-bottom-left-radius: 4px;
   cursor: pointer;

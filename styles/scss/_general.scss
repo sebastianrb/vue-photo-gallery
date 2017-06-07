@@ -43,22 +43,27 @@ div#root {
         width: 52%;
         box-shadow: 0 0px 15px 0px rgba(128, 128, 128, 1);
         min-width: 600px;
-        transition: opacity .4s;
+        transition: opacity .4s, transform .4s;
+        transform: translateX(0) scale(0);
         opacity: 0;
 
         //animation styles
         &.selected {
+            transition: opacity .9s ease, transform .9s;
             opacity: 1;
+            transform: translateX(0) scale(1);
         }
 
         &.next-image {
-            opacity: 0.4;
-            transform: translateX(110%) scale(.7);
+            transition: opacity .9s, transform .9s;
+            opacity: 0.3;
+            transform: translateX(110%) scale(.6);
         }
 
         &.previous-image {
-            opacity: 0.4;
-            transform: translateX(-110%) scale(.7);
+            transition: opacity .9s, transform .9s;
+            opacity: 0.3;
+            transform: translateX(-110%) scale(.6);
         }
 
     }
@@ -74,11 +79,11 @@ div#root {
 //controls
 
 .gallery-controls {
-    height: 60px;
+    height: 55px;
     width: 75%;
     border-radius: 4px;
     overflow: hidden;
-    margin: 20px auto;
+    margin: 0 auto 30px;
 }
 
 .gallery-controls__arrow {
@@ -90,7 +95,7 @@ div#root {
     align-items: center;
     transition: all .2s;
     cursor: pointer;
-    background: transparentize($primary-color, .6);
+    background: transparentize($primary-color, .7);
 
     &:hover {
         background: transparentize($primary-color, .3);
@@ -99,7 +104,7 @@ div#root {
 
 i.fa.fa-angle-right,
  i.fa.fa-angle-left {
-    font-size: 3.1em;
+    font-size: 2.8em;
     color: white;
 }
 
@@ -114,7 +119,7 @@ i.fa.fa-angle-right,
     background: rgba(1, 1, 56, 0.4);
     color: $primary-color;
     width: 50%;
-    height: 70px;
+    height: 65px;
     font-size: 0.9em;
     font-weight: bolder;
 
@@ -141,7 +146,7 @@ i.fa.fa-angle-right,
         left: -45px;
         border: none;
         background: transparentize($primary-color, .4);
-        height: 70px;
+        height: 65px;
         width: 45px;
         border-bottom-left-radius: 4px;
         cursor: pointer;
