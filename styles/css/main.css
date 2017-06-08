@@ -48,10 +48,7 @@ div#root .gallery-container {
 }
 div#root .image-view {
   position: relative;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
+  display: block;
   min-height: 620px;
   width: 100%;
 }
@@ -61,24 +58,26 @@ div#root .image-view__image-container {
   box-shadow: 0 0px 15px 0px gray;
   min-width: 600px;
   transition: opacity .4s, transform .6s;
-  transform: translateX(0) scale(0);
+  transform: translateX(-50%) scale(0) translateY(-80%);
   opacity: 0;
+  left: 50%;
+  top: 50%;
 }
 div#root .image-view__image-container.selected {
   transition: opacity .5s ease, transform 1s;
   opacity: 1;
-  transform: translateX(0) scale(1);
+  transform: translateX(-50%) scale(1) translateY(-50%);
   z-index: 20;
 }
 div#root .image-view__image-container.next-image {
   transition: opacity 1s, transform 1s;
   opacity: 0.3;
-  transform: translateX(110%) scale(0.6);
+  transform: translateX(60%) scale(0.6) translateY(-80%);
 }
 div#root .image-view__image-container.previous-image {
   transition: opacity 1s, transform 1s;
   opacity: 0.3;
-  transform: translateX(-110%) scale(0.6);
+  transform: translateX(-160%) scale(0.6) translateY(-80%);
 }
 div#root .image-view__image {
   width: 100%;
@@ -115,6 +114,33 @@ i.fa.fa-angle-left {
   color: white;
 }
 
+.gallery-bullets {
+  width: 35%;
+  height: 25px;
+  margin: 20px auto 30px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.gallery-bullets .gallery-bullets__bullet {
+  flex: 1;
+  height: 15px;
+  background: rgba(1, 1, 56, 0.3);
+  transition: background-color .3s;
+}
+.gallery-bullets .gallery-bullets__bullet:first-child {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+.gallery-bullets .gallery-bullets__bullet:last-child {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.gallery-bullets .gallery-bullets__bullet--selected {
+  background-color: #f94c0c;
+}
+
 .info-card {
   position: fixed;
   top: 0;
@@ -123,7 +149,7 @@ i.fa.fa-angle-left {
   background: rgba(1, 1, 56, 0.4);
   color: #010138;
   width: 50%;
-  height: 65px;
+  height: 58px;
   font-size: 0.9em;
   font-weight: bolder;
   z-index: 50;
@@ -148,7 +174,7 @@ i.fa.fa-angle-left {
   left: -45px;
   border: none;
   background: rgba(1, 1, 56, 0.6);
-  height: 65px;
+  height: 58px;
   width: 45px;
   border-bottom-left-radius: 4px;
   cursor: pointer;
@@ -176,7 +202,7 @@ i.fa.fa-angle-left {
 .info-card .info-card__content-caption span {
   display: block;
   color: white;
-  font-size: .9em;
+  font-size: .8em;
 }
 
 .header__photo-info-button {
@@ -222,6 +248,7 @@ i.fa.fa-angle-left {
 
 .header__photo-info-button:hover + .header__photo-info-popup {
   opacity: 1;
+  z-index: 20;
 }
 
 .header__photo-info-button.load-hidden {
@@ -241,6 +268,7 @@ i.fa.fa-angle-left {
   padding: 10px;
   font-size: .8em;
   border-radius: 3px;
+  z-index: -10;
 }
 
 /*# sourceMappingURL=main.css.map */

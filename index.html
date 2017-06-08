@@ -8,7 +8,7 @@
               href="https://s-media-cache-ak0.pinimg.com/originals/a9/e0/19/a9e01984a9cdadd57b0fd3e0985fb2fc.png">
         <script src="https://use.fontawesome.com/3c2bdfb862.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
-        <link rel="stylesheet" href="styles/css/main.css"/>
+        <link rel="stylesheet" href="styles/css/main-processed.css"/>
     </head>
     <body>
 
@@ -31,6 +31,9 @@
                 <div class="gallery-controls__arrow previous-arrow" @click="previousPhoto"><i class="fa fa-angle-left" aria-hidden="true"></i></div>
                 <div class="gallery-controls__arrow next-arrow" @click="nextPhoto"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
             </div>
+            <div class="gallery-bullets">
+                <div class="gallery-bullets__bullet" v-for="(image, index) in images" v-bind:class="{'gallery-bullets__bullet--selected': image.selected}"></div>
+            </div>
 
         </gallery-container>
 
@@ -38,7 +41,7 @@
             <div class="info-card__content" v-for="(image, index) in images" v-bind:class="{'info-card__content--shown': image.selected}">
                 <p class="info-card__content-caption"><span>Name</span>{{image.name}}</p>
                 <p class="info-card__content-caption"><span>Location</span>{{image.location}}</p>
-                <p class="info-card__content-caption"><span >Camera</span>{{image.camera}}</p>
+                <p class="info-card__content-caption"><span >Date</span>{{image.date}}</p>
             </div>
         </info-card>
     </div>

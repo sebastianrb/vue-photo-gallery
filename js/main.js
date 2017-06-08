@@ -46,7 +46,7 @@ new Vue({
             next: false,
             previous: false,
             location: "Carbondale, CO",
-            camera: "Canon Rebel XT"
+            date: "2007"
         },
         {
             name: "Lightning",
@@ -55,7 +55,7 @@ new Vue({
             next: true,
             previous: false,
             location: "Carbondale, CO",
-            camera: "Canon Rebel XT"
+            date: "2006"
         },
         {
             name: "Mountains",
@@ -64,7 +64,7 @@ new Vue({
             next: false,
             previous: false,
             location: "Aspen, CO",
-            camera: "Canon Rebel XT"
+            date: "2007"
         },
         {
             name: "Tree",
@@ -73,7 +73,7 @@ new Vue({
             next: false,
             previous: false,
             location: "Carbondale, CO",
-            camera: "Canon Rebel XT"
+            date: "2006"
         },
         {
             name: "Rocks in a River",
@@ -82,7 +82,7 @@ new Vue({
             next: false,
             previous: true,
             location: "Carbondale, CO",
-            camera: "Canon Rebel XT"
+            date: "2006"
         }
         ],
 
