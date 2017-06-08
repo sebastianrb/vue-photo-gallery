@@ -76,7 +76,7 @@ new Vue({
             date: "2006"
         },
         {
-            name: "Rocks in a River",
+            name: "Rocks",
             src: "./images/photo-portfolio-rock.jpg",
             selected: false,
             next: false,
