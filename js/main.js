@@ -190,7 +190,6 @@ new Vue({
         //scroll event listener
         window.addEventListener("scroll", (event) => {
           if(window.innerWidth < 851) {
-            console.log("Small screen scrolling!");
              if (document.body.scrollTop > 60) {
                 this.titleFaded = true;
              } else {
