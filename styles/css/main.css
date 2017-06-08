@@ -38,6 +38,7 @@ body {
 .title-container {
   position: relative;
   top: -10px;
+  transition: opacity .4s;
 }
 @media screen and (max-width: 850px) {
   .title-container {
@@ -72,6 +73,10 @@ body {
   font-size: .9em;
   margin: 0;
   color: #f94c0c;
+}
+
+.title-container.faded {
+  opacity: .2;
 }
 
 div#root {

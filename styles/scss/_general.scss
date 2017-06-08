@@ -2,6 +2,7 @@
 .title-container {
     position: relative;
     top: -10px;
+    transition: opacity .4s;
 
     @media screen and (max-width: $breakpoint-medium) {
         text-align: center;
@@ -32,6 +33,12 @@
     font-size: .9em;
     margin: 0;
     color: $secondary-color;
+}
+
+//title animation styles
+
+.title-container.faded {
+    opacity: .2;
 }
 
 //image gallery styles
@@ -83,7 +90,7 @@ div#root {
         left: 50%;
         top: 50%;
 
-        //animation styles
+        //gallery animation styles
         &.selected {
             transition: opacity .5s ease, transform 1s;
             opacity: 1;
@@ -405,3 +412,5 @@ i.fa.fa-angle-right,
   border-radius: 3px;
   z-index: -10;
 }
+
+
