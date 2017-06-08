@@ -40,13 +40,13 @@ new Vue({
 
         images: [
         {
-            name: "House",
-            src: "./images/photo-portfolio-house.jpg",
+            name: "Rocks",
+            src: "./images/photo-portfolio-rock.jpg",
             selected: true,
             next: false,
             previous: false,
             location: "Carbondale, CO",
-            date: "2007"
+            date: "2006"
         },
         {
             name: "Lightning",
@@ -76,13 +76,13 @@ new Vue({
             date: "2006"
         },
         {
-            name: "Rocks",
-            src: "./images/photo-portfolio-rock.jpg",
+            name: "House",
+            src: "./images/photo-portfolio-house.jpg",
             selected: false,
             next: false,
             previous: true,
             location: "Carbondale, CO",
-            date: "2006"
+            date: "2007"
         }
         ],
 
