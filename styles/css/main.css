@@ -203,6 +203,7 @@ i.fa.fa-angle-left {
   display: block;
   color: white;
   font-size: .8em;
+  margin-bottom: 1px;
 }
 
 .header__photo-info-button {
