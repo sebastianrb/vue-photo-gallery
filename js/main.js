@@ -88,7 +88,8 @@ new Vue({
 
         selectedPhotoID: "",
         nextID: "",
-        previousID: ""
+        previousID: "",
+        pageNotLoaded: true
     },
 
     methods: {
@@ -175,6 +176,13 @@ new Vue({
     mounted() {
         this.setSelectedID();
         this.setNextAndPreviousID();
+    },
+
+    created() {
+        //scroll event listener
+        window.addEventListener("load", (event) => {
+            this.pageNotLoaded = false;
+        });
     }
 })
 

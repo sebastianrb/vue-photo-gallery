@@ -59,6 +59,7 @@ div#root {
         min-height: 620px;
         width: 100%;
         margin-top: 10px;
+        transition: all .8s .2s;
 
         @media screen and (max-width: $breakpoint-medium) {
             margin-top: 0;
@@ -76,6 +77,12 @@ div#root {
         @media screen and (max-width: $breakpoint-smallest) {
             min-height: 400px;
         }
+    }
+
+    //load animation
+    .image-view.load-hidden {
+        opacity: 0;
+        transform: scale(.8);
     }
 
     .image-view__image-container {
@@ -150,7 +157,7 @@ div#root {
     width: 65%;
     border-radius: 4px;
     overflow: hidden;
-    margin: 0 auto 15px;
+    margin: 10px auto 15px;
 
     @media screen and (max-width: $breakpoint-medium) {
         width: 80%;

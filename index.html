@@ -9,7 +9,7 @@
         <script src="https://use.fontawesome.com/3c2bdfb862.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
         <link rel="stylesheet" href="styles/css/main-processed.css"/>
- <!--        <link rel="stylesheet" href="styles/css/main.css"/> -->
+        <!-- <link rel="stylesheet" href="styles/css/main.css"/> -->
     </head>
     <body>
 
@@ -21,7 +21,7 @@
     <div id="root" class="container">
 
         <gallery-container>
-            <div class="image-view">
+            <div class="image-view" v-bind:class="{'load-hidden': pageNotLoaded}">
                 <div v-for="(image, index) in images" class="image-view__image-container"
                 v-bind:class="{selected: image.selected, 'next-image': image.next, 'previous-image': image.previous}" v-if="image.src">
                     <img :src="image.src" alt="placeholder+image" class="image-view__image">
