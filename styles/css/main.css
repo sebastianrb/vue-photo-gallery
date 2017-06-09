@@ -230,6 +230,11 @@ div#root .image-view__image {
 .gallery-controls__arrow:hover {
   background: rgba(1, 1, 56, 0.7);
 }
+@media screen and (max-width: 600px) {
+  .gallery-controls__arrow:hover {
+    background: rgba(1, 1, 56, 0.4);
+  }
+}
 
 i.fa.fa-angle-right,
 i.fa.fa-angle-left {

@@ -202,6 +202,12 @@ div#root {
     &:hover {
         background: transparentize($primary-color, .3);
     }
+
+    @media screen and (max-width: $breakpoint-small) {
+        &:hover {
+            background: transparentize($primary-color, .6);
+        }
+    }
 }
 
 i.fa.fa-angle-right,
