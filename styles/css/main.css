@@ -93,7 +93,8 @@ div#root .image-view {
   display: block;
   min-height: 620px;
   width: 100%;
-  margin-top: 10px;
+  margin-top: 35px;
+  margin-bottom: 25px;
   transition: all .8s .2s;
 }
 @media screen and (max-width: 850px) {
@@ -119,7 +120,17 @@ div#root .image-view {
 }
 div#root .image-view.load-hidden {
   opacity: 0;
-  transform: scale(0.8);
+  transform: translateY(-30px);
+}
+div#root .image-view__overlay {
+  position: absolute;
+  width: 110%;
+  height: 90%;
+  background: rgba(0, 0, 0, 0.15);
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%) translateX(-5%);
+  z-index: -5;
 }
 div#root .image-view__image-container {
   position: absolute;
@@ -275,7 +286,7 @@ i.fa.fa-angle-left {
   right: -50%;
   transition: right .7s ease;
   background: rgba(1, 1, 56, 0.3);
-  color: #010138;
+  color: #010135;
   width: 50%;
   height: 58px;
   font-size: 0.9em;

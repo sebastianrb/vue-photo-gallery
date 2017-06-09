@@ -205,6 +205,12 @@ new Vue({
              }
           }
         });
+
+        window.addEventListener("resize", (event) => {
+          if(window.innerWidth > 850) {
+             this.titleFaded = false;
+          }
+        });
     }
 })
 
