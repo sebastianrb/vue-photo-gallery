@@ -92,7 +92,7 @@ div#root {
 
         //gallery animation styles
         &.selected {
-            transition: opacity .5s ease, transform 1s;
+            transition: opacity .5s ease, transform 1.2s;
             opacity: 1;
             // transform: translateX(0) scale(1);
             transform: translateX(-50%) scale(1) translateY(-50%);
@@ -100,7 +100,7 @@ div#root {
         }
 
         &.next-image {
-            transition: opacity 1s, transform 1s;
+            transition: opacity 1.2s, transform 1.2s;
             opacity: 0.3;
             transform: translateX(60%) scale(0.6) translateY(-80%);
 
@@ -110,7 +110,7 @@ div#root {
         }
 
         &.previous-image {
-            transition: opacity 1s, transform 1s;
+            transition: opacity 1.2s, transform 1.2s;
             opacity: 0.3;
             transform: translateX(-160%) scale(0.6) translateY(-80%);
 
