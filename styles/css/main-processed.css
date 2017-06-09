@@ -145,10 +145,10 @@ div#root .image-view__image-container {
   -webkit-box-shadow: 0 0px 15px 0px gray;
           box-shadow: 0 0px 15px 0px gray;
   min-width: 600px;
-  -webkit-transition: opacity .4s, -webkit-transform .6s;
-  transition: opacity .4s, -webkit-transform .6s;
-  transition: opacity .4s, transform .6s;
-  transition: opacity .4s, transform .6s, -webkit-transform .6s;
+  -webkit-transition: opacity .3s, -webkit-transform .6s;
+  transition: opacity .3s, -webkit-transform .6s;
+  transition: opacity .3s, transform .6s;
+  transition: opacity .3s, transform .6s, -webkit-transform .6s;
   -webkit-transform: translateX(-50%) scale(0) translateY(-80%);
           transform: translateX(-50%) scale(0) translateY(-80%);
   opacity: 0;
