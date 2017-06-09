@@ -197,7 +197,7 @@ div#root {
     align-items: center;
     transition: all .2s;
     cursor: pointer;
-    background: transparentize($primary-color, .7);
+    background: transparentize($primary-color, .6);
 
     &:hover {
         background: transparentize($primary-color, .3);
@@ -206,7 +206,7 @@ div#root {
 
 i.fa.fa-angle-right,
  i.fa.fa-angle-left {
-    font-size: 2.8em;
+    font-size: 2.6em;
     color: white;
 
     @media screen and (max-width: $breakpoint-small) {
