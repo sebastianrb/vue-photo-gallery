@@ -94,18 +94,20 @@ div#root .image-view {
   min-height: 620px;
   width: 100%;
   margin-top: 40px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   transition: all .8s .2s;
 }
 @media screen and (max-width: 850px) {
   div#root .image-view {
-    margin-top: 0;
+    margin-top: 10px;
     min-height: 550px;
   }
 }
 @media screen and (max-width: 600px) {
   div#root .image-view {
     min-height: 480px;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 }
 @media screen and (max-width: 450px) {
@@ -198,7 +200,7 @@ div#root .image-view__image {
   width: 65%;
   border-radius: 4px;
   overflow: hidden;
-  margin: 10px auto 15px;
+  margin: 15px auto 60px;
 }
 @media screen and (max-width: 850px) {
   .gallery-controls {
@@ -250,9 +252,9 @@ i.fa.fa-angle-left {
 }
 
 .gallery-bullets {
-  width: 35%;
+  width: 40%;
   height: 25px;
-  margin: 20px auto 45px;
+  margin: 0 auto 40px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -263,17 +265,13 @@ i.fa.fa-angle-left {
   height: 15px;
   background: rgba(1, 1, 56, 0.3);
   transition: background-color .3s;
-}
-.gallery-bullets .gallery-bullets__bullet:first-child {
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
-}
-.gallery-bullets .gallery-bullets__bullet:last-child {
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
+  border-radius: 3px;
 }
 .gallery-bullets .gallery-bullets__bullet--selected {
   background-color: #f94c0c;
+}
+.gallery-bullets .gallery-bullets__bullet:not(:first-child) {
+  margin-left: 10px;
 }
 @media screen and (max-width: 850px) {
   .gallery-bullets {
@@ -283,6 +281,7 @@ i.fa.fa-angle-left {
 @media screen and (max-width: 550px) {
   .gallery-bullets {
     width: 65%;
+    margin: 0 auto 35px;
   }
 }
 

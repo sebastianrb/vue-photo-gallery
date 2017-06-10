@@ -61,16 +61,18 @@ div#root {
         min-height: 620px;
         width: 100%;
         margin-top: 40px;
-        margin-bottom: 30px;
+        margin-bottom: 10px;
         transition: all .8s .2s;
 
         @media screen and (max-width: $breakpoint-medium) {
-            margin-top: 0;
+            margin-top: 10px;
             min-height: 550px;
         }
 
         @media screen and (max-width: $breakpoint-small) {
             min-height: 480px;
+            margin-top: 20px;
+            margin-bottom: 20px;
         }
 
         @media screen and (max-width: $breakpoint-450) {
@@ -173,7 +175,7 @@ div#root {
     width: 65%;
     border-radius: 4px;
     overflow: hidden;
-    margin: 10px auto 15px;
+    margin: 15px auto 60px;
 
     @media screen and (max-width: $breakpoint-medium) {
         width: 80%;
@@ -224,9 +226,9 @@ i.fa.fa-angle-right,
 //bullets
 
 .gallery-bullets {
-    width: 35%;
+    width: 40%;
     height: 25px;
-    margin: 20px auto 45px;
+    margin: 0 auto 40px;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -237,20 +239,15 @@ i.fa.fa-angle-right,
       height: 15px;
       background: transparentize($primary-color, .7);
       transition: background-color .3s;
-
-      &:first-child {
-        border-top-left-radius: 3px;
-        border-bottom-left-radius: 3px;
-      }
-
-      &:last-child {
-        border-top-right-radius: 3px;
-        border-bottom-right-radius: 3px;
-      }
+        border-radius: 3px;
     }
 
     .gallery-bullets__bullet--selected {
         background-color: $secondary-color;
+    }
+
+    .gallery-bullets__bullet:not(:first-child) {
+        margin-left: 10px;
     }
 
     @media screen and (max-width: $breakpoint-medium) {
@@ -259,6 +256,7 @@ i.fa.fa-angle-right,
 
     @media screen and (max-width: $breakpoint-extra-small) {
         width: 65%;
+        margin: 0 auto 35px;
     }
 
 }

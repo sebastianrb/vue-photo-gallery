@@ -29,13 +29,17 @@
                 <div class="image-view__overlay"></div>
             </div>
 
+            <div class="gallery-bullets">
+                <div class="gallery-bullets__bullet" v-for="(image, index) in images" v-bind:class="{'gallery-bullets__bullet--selected': image.selected}"></div>
+            </div>
+
             <div class="gallery-controls">
                 <div class="gallery-controls__arrow previous-arrow" @click="previousPhoto"><i class="fa fa-angle-left" aria-hidden="true"></i></div>
                 <div class="gallery-controls__arrow next-arrow" @click="nextPhoto"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
             </div>
-            <div class="gallery-bullets">
+            <!-- <div class="gallery-bullets">
                 <div class="gallery-bullets__bullet" v-for="(image, index) in images" v-bind:class="{'gallery-bullets__bullet--selected': image.selected}"></div>
-            </div>
+            </div> -->
 
         </gallery-container>
 
