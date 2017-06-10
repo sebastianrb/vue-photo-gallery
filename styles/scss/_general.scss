@@ -287,7 +287,7 @@ i.fa.fa-angle-right,
         color: $secondary-color;
         font-size: 3em;
         transition: transform .3s;
-        transform: rotateZ(0deg) translate(0);
+        transform: rotateZ(-180deg) translate(0);
         overflow: hidden;
     }
 
@@ -295,7 +295,7 @@ i.fa.fa-angle-right,
         right: 0;
 
         i {
-            transform: rotateZ(-180deg) translate(0);
+            transform: rotateZ(0) translate(0);
             transition: transform .3s;
         }
     }

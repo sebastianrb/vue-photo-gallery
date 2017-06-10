@@ -307,14 +307,14 @@ i.fa.fa-angle-left {
   color: #f94c0c;
   font-size: 3em;
   transition: transform .3s;
-  transform: rotateZ(0deg) translate(0);
+  transform: rotateZ(-180deg) translate(0);
   overflow: hidden;
 }
 .info-card.show-card {
   right: 0;
 }
 .info-card.show-card i {
-  transform: rotateZ(-180deg) translate(0);
+  transform: rotateZ(0) translate(0);
   transition: transform .3s;
 }
 .info-card .info-card__close {
