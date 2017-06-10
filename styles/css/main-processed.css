@@ -95,8 +95,8 @@ div#root .image-view {
   display: block;
   min-height: 620px;
   width: 100%;
-  margin-top: 35px;
-  margin-bottom: 25px;
+  margin-top: 40px;
+  margin-bottom: 30px;
   -webkit-transition: all .8s .2s;
   transition: all .8s .2s;
 }
