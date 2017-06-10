@@ -292,7 +292,7 @@ i.fa.fa-angle-left {
 .gallery-bullets {
   width: 40%;
   height: 23px;
-  margin: 0 auto 40px;
+  margin: 0 auto 35px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
