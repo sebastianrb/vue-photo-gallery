@@ -199,7 +199,7 @@ div#root .image-view__image {
   height: 50px;
   width: 70%;
   overflow: hidden;
-  margin: 15px auto 60px;
+  margin: 15px auto 65px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;

@@ -174,7 +174,7 @@ div#root {
     height: 50px;
     width: 70%;
     overflow: hidden;
-    margin: 15px auto 60px;
+    margin: 15px auto 65px;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -183,10 +183,6 @@ div#root {
     @media screen and (max-width: $breakpoint-large) {
         width: 80%;
     }
-
-    // @media screen and (max-width: $breakpoint-medium) {
-    //     width: 80%;
-    // }
 
     @media screen and (max-width: $breakpoint-extra-small) {
         width: 90%;
