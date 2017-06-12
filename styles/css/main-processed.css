@@ -355,7 +355,7 @@ i.fa.fa-angle-left {
   background: rgba(1, 1, 56, 0.7);
   color: #f94c0c;
   width: 50%;
-  height: 58px;
+  height: 60px;
   font-size: 0.9em;
   font-weight: bolder;
   z-index: 50;
@@ -388,7 +388,7 @@ i.fa.fa-angle-left {
   left: -45px;
   border: none;
   background: #010138;
-  height: 58px;
+  height: 60px;
   width: 45px;
   border-bottom-left-radius: 4px;
   cursor: pointer;

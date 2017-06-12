@@ -48,9 +48,9 @@
 
         <info-card>
             <div class="info-card__content" v-for="(image, index) in images" v-bind:class="{'info-card__content--shown': image.selected}">
-                <p class="info-card__content-caption"><span>Name</span>{{image.name}}</p>
-                <p class="info-card__content-caption"><span>Location</span>{{image.location}}</p>
-                <p class="info-card__content-caption"><span >Date</span>{{image.date}}</p>
+                <p class="info-card__content-caption"><span>Name:</span>{{image.name}}</p>
+                <p class="info-card__content-caption"><span>Location:</span>{{image.location}}</p>
+                <p class="info-card__content-caption"><span >Date:</span>{{image.date}}</p>
             </div>
         </info-card>
     </div>
