@@ -378,7 +378,7 @@ i.fa.fa-angle-left {
   .info-card {
     font-size: .8em;
     height: 50px;
-    background: rgba(1, 1, 56, 0.6);
+    background: rgba(1, 1, 56, 0.7);
   }
 }
 @media screen and (max-width: 750px) {
@@ -391,7 +391,6 @@ i.fa.fa-angle-left {
 @media screen and (max-width: 450px) {
   .info-card {
     font-size: .70em;
-    background: rgba(1, 1, 56, 0.7);
   }
 }
 
