@@ -93,7 +93,7 @@ div#root {
 
     .image-view__overlay {
         position: absolute;
-        width: 110%;
+        width: 115%;
         height: 90%;
         background: rgba(0, 0, 0, 0.15);
         top: 50%;
@@ -172,18 +172,21 @@ div#root {
 
 .gallery-controls {
     height: 50px;
-    width: 55%;
-    border-radius: 6px;
+    width: 70%;
     overflow: hidden;
     margin: 15px auto 60px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
 
     @media screen and (max-width: $breakpoint-large) {
-        width: 60%;
-    }
-
-    @media screen and (max-width: $breakpoint-medium) {
         width: 80%;
     }
+
+    // @media screen and (max-width: $breakpoint-medium) {
+    //     width: 80%;
+    // }
 
     @media screen and (max-width: $breakpoint-extra-small) {
         width: 90%;
@@ -197,20 +200,22 @@ div#root {
 
 .gallery-controls__arrow {
     float: left;
-    height: 100%;
-    width: 50%;
+    height: 95%;
+    width: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: all .2s;
     cursor: pointer;
-    background: transparentize($primary-color, .6);
+    background: rgba(1, 1, 56, 0.4);
+    border-radius: 5px;
 
     &:hover {
         background: transparentize($primary-color, .3);
     }
 
     @media screen and (max-width: $breakpoint-small) {
+        width: 30%;
         &:hover {
             background: transparentize($primary-color, .6);
         }
@@ -219,8 +224,9 @@ div#root {
 
 i.fa.fa-angle-right,
  i.fa.fa-angle-left {
-    font-size: 2.5em;
+    font-size: 2.3em;
     color: white;
+    margin-bottom: 2px;
 
     @media screen and (max-width: $breakpoint-small) {
         font-size: 2.2em;
@@ -231,8 +237,8 @@ i.fa.fa-angle-right,
 
 .gallery-bullets {
     width: 40%;
-    height: 23px;
-    margin: 0 auto 35px;
+    height: 25px;
+    margin: 0 20px;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -240,10 +246,10 @@ i.fa.fa-angle-right,
 
     .gallery-bullets__bullet {
       flex: 1;
-      height: 14px;
-      background: transparentize($primary-color, .7);
+      height: 15px;
+      background: rgba(1, 1, 56, 0.3);
       transition: background-color .3s;
-        border-radius: 3px;
+      border-radius: 3px;
     }
 
     .gallery-bullets__bullet--selected {
@@ -260,7 +266,6 @@ i.fa.fa-angle-right,
 
     @media screen and (max-width: $breakpoint-extra-small) {
         width: 65%;
-        margin: 0 auto 35px;
     }
 
 }

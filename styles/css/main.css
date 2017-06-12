@@ -126,7 +126,7 @@ div#root .image-view.load-hidden {
 }
 div#root .image-view__overlay {
   position: absolute;
-  width: 110%;
+  width: 115%;
   height: 90%;
   background: rgba(0, 0, 0, 0.15);
   top: 50%;
@@ -197,17 +197,15 @@ div#root .image-view__image {
 
 .gallery-controls {
   height: 50px;
-  width: 55%;
-  border-radius: 6px;
+  width: 70%;
   overflow: hidden;
   margin: 15px auto 60px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
 }
 @media screen and (max-width: 1100px) {
-  .gallery-controls {
-    width: 60%;
-  }
-}
-@media screen and (max-width: 850px) {
   .gallery-controls {
     width: 80%;
   }
@@ -226,19 +224,23 @@ div#root .image-view__image {
 
 .gallery-controls__arrow {
   float: left;
-  height: 100%;
-  width: 50%;
+  height: 95%;
+  width: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: all .2s;
   cursor: pointer;
   background: rgba(1, 1, 56, 0.4);
+  border-radius: 5px;
 }
 .gallery-controls__arrow:hover {
   background: rgba(1, 1, 56, 0.7);
 }
 @media screen and (max-width: 600px) {
+  .gallery-controls__arrow {
+    width: 30%;
+  }
   .gallery-controls__arrow:hover {
     background: rgba(1, 1, 56, 0.4);
   }
@@ -246,8 +248,9 @@ div#root .image-view__image {
 
 i.fa.fa-angle-right,
 i.fa.fa-angle-left {
-  font-size: 2.5em;
+  font-size: 2.3em;
   color: white;
+  margin-bottom: 2px;
 }
 @media screen and (max-width: 600px) {
   i.fa.fa-angle-right,
@@ -258,8 +261,8 @@ i.fa.fa-angle-left {
 
 .gallery-bullets {
   width: 40%;
-  height: 23px;
-  margin: 0 auto 35px;
+  height: 25px;
+  margin: 0 20px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -267,7 +270,7 @@ i.fa.fa-angle-left {
 }
 .gallery-bullets .gallery-bullets__bullet {
   flex: 1;
-  height: 14px;
+  height: 15px;
   background: rgba(1, 1, 56, 0.3);
   transition: background-color .3s;
   border-radius: 3px;
@@ -286,7 +289,6 @@ i.fa.fa-angle-left {
 @media screen and (max-width: 550px) {
   .gallery-bullets {
     width: 65%;
-    margin: 0 auto 35px;
   }
 }
 
