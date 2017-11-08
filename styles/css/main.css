@@ -10,7 +10,6 @@ main {
 }
 
 body {
-  max-width: 1500px;
   font-size: 1.2em;
   font-family: "Roboto", Arial;
   margin: 0 auto;
@@ -145,6 +144,7 @@ div#root .image-view__image-container {
   opacity: 0;
   left: 50%;
   top: 50%;
+  max-width: 720px;
 }
 div#root .image-view__image-container.selected {
   transition: opacity .5s ease, transform 1.2s;
