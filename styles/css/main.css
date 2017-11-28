@@ -140,11 +140,11 @@ div#root .image-view__image-container {
   box-shadow: 0 0px 15px 0px gray;
   min-width: 600px;
   transition: opacity .3s, transform .6s;
-  transform: translateX(-50%) scale(0) translateY(-80%);
+  transform: translateX(-50%) scale(0) translateY(-100%);
   opacity: 0;
   left: 50%;
   top: 50%;
-  max-width: 720px;
+  max-width: 550px;
 }
 div#root .image-view__image-container.selected {
   transition: opacity 0.5s ease, transform 1s;
@@ -155,21 +155,21 @@ div#root .image-view__image-container.selected {
 div#root .image-view__image-container.next-image {
   transition: opacity 1.2s, transform 1s;
   opacity: 0.3;
-  transform: translateX(60%) scale(0.6) translateY(-80%);
+  transform: translateX(60%) scale(0.4) translateY(-120%);
 }
 @media screen and (max-width: 1100px) {
   div#root .image-view__image-container.next-image {
-    transform: translateX(50%) scale(0.6) translateY(-80%);
+    transform: translateX(50%) scale(0.4) translateY(-120%);
   }
 }
 div#root .image-view__image-container.previous-image {
   transition: opacity 1.2s, transform 1s;
   opacity: 0.3;
-  transform: translateX(-160%) scale(0.6) translateY(-80%);
+  transform: translateX(-160%) scale(0.4) translateY(-120%);
 }
 @media screen and (max-width: 1100px) {
   div#root .image-view__image-container.previous-image {
-    transform: translateX(-150%) scale(0.6) translateY(-80%);
+    transform: translateX(-150%) scale(0.4) translateY(-120%);
   }
 }
 @media screen and (max-width: 850px) {
